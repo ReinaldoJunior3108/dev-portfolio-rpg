@@ -4,7 +4,6 @@ import "react-tabs/style/react-tabs.css";
 import { TypeAnimation } from "react-type-animation";
 import { useEffect, useState } from "react";
 import Loader from "./components/Loader";
-import "../dist/rpgui.css";
 const tabStyles =
   "relative  list-none w-[90%] h-full flex items-center justify-center  text-white font-['Silkscreen'] bg-[url('./assets/button.png')] bg-size-[length:100%_100%] bg-cover bg-center bg-no-repeat  p-2 transition border-purple-700 hover:bg-[url('src/assets/button-hover.png')] hover:bg-size-[length:100%_100%] hover:bg-cover hover:bg-center hover:bg-no-repeat  outline-none";
 const tabActive =
