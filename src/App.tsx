@@ -5,6 +5,8 @@ import { TypeAnimation } from "react-type-animation";
 import { useEffect, useState } from "react";
 import Loader from "./components/Loader";
 import "./assets/rpgui.css";
+import Reinaldo from "./assets/img/reinaldo.png";
+import logo from "./assets/img/logo.png";
 
 const tabStyles =
   "relative  list-none w-[90%] h-full flex items-center justify-center  text-white font-['Silkscreen'] bg-[url('./assets/button.png')] bg-size-[length:100%_100%] bg-cover bg-center bg-no-repeat  p-2 transition border-purple-700 hover:bg-[url('src/assets/button-hover.png')] hover:bg-size-[length:100%_100%] hover:bg-cover hover:bg-center hover:bg-no-repeat  outline-none";
@@ -26,7 +28,7 @@ function App() {
           <div className=" rounded-xs h-[95vh] w-[25vw]">
             <div className="flex h-[95vh]  flex-col items-center justify-between p-4 text-center  bg-gray-900 rounded-xs rpgui-container framed">
               <img
-                src="src/assets/img/logo.png"
+                src={logo}
                 alt="Logo"
                 className="mx-auto mb-1 w-40 mt-3  rpgui-container framed-grey"
               />
@@ -67,7 +69,7 @@ function App() {
                 <br />
                 <hr className="golden max-w-[76%]"/>
               <img
-                src="./src/assets/img/reinaldo.png"
+                src={Reinaldo}
                 alt="Reinaldo Junior"
                 className="absolute top-6 right-[-8rem] w-[31rem] "
               />

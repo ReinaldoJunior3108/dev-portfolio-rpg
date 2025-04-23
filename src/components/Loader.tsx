@@ -1,4 +1,5 @@
 import LoadingText from "./Frases";
+import Attack from "../assets/img/Attack.gif";
 
 export default function Loader() {
     
@@ -20,7 +21,7 @@ export default function Loader() {
         <div className="rpgui-progress-left-edge"></div>
         </div>
         
-        <img src="./src/assets/img/Attack.gif" alt="" className="w-64 absolute mt-0 left-10"/>
+        <img src={Attack} alt="" className="w-64 absolute mt-0 left-10"/>
       </div>
     </div>
     
