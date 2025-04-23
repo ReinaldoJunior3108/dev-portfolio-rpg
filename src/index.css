@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import "../dist/rpgui.css";
 
 @theme{
 --animate-progress: progress steps(5) 8s forwards;
