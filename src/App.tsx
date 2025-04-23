@@ -26,7 +26,7 @@ function App() {
           <div className=" rounded-xs h-[95vh] w-[25vw]">
             <div className="flex h-[95vh]  flex-col items-center justify-between p-4 text-center  bg-gray-900 rounded-xs rpgui-container framed">
               <img
-                src="src/assets/logo.png"
+                src="src/assets/img/logo.png"
                 alt="Logo"
                 className="mx-auto mb-1 w-40 mt-3  rpgui-container framed-grey"
               />
@@ -67,7 +67,7 @@ function App() {
                 <br />
                 <hr className="golden max-w-[76%]"/>
               <img
-                src="./src/assets/reinaldo.png"
+                src="./src/assets/img/reinaldo.png"
                 alt="Reinaldo Junior"
                 className="absolute top-6 right-[-8rem] w-[31rem] "
               />
