@@ -59,8 +59,8 @@ function App() {
             </div>
           </div>
 
-          <div className="flex-1 font-['Silkscreen'] text-white  p-4 text-center h-full rpgui-container framed overflow-y-clip">
-            <TabPanel className=" flex justify-center flex-col items-center w-[60vw]  relative text-[0.8rem]">
+          <div className="flex-1 font-['Silkscreen'] text-white  p-4 text-center relative h-full rpgui-container framed overflow-y-clip">
+            <TabPanel className=" flex justify-center flex-col items-center w-[60vw]  text-[0.8rem]">
               <h1>Bem-vindo ao meu portfólio!</h1>
                 <div className="max-w-[60%] text-left mt-10 ml-6">
                 <p className="text-white font-['JetBrains_Mono','monospace'] font-bold text-2xl ">Reinaldo Junior</p>
@@ -68,11 +68,11 @@ function App() {
                 </div>
                 <br />
                 <hr className="golden max-w-[76%]"/>
-              <img
+                <img
                 src={Reinaldo}
                 alt="Reinaldo Junior"
-                className="absolute top-6 right-[-8rem] w-[31rem] "
-              />
+                className="absolute bottom-0 right-[-8rem] w-[31rem]"
+                />
               <div className="mt-15 ml-6 max-w-[60%] text-wrap ">
                 <TypeAnimation className="text-left"
                   sequence={[
