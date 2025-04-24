@@ -11,7 +11,7 @@ import logo from "./assets/img/logo.png";
 const tabStyles =
   "relative  list-none w-[90%] h-full flex items-center justify-center  text-white font-['Silkscreen'] bg-[url('./assets/img/button.png')] bg-size-[length:100%_100%] bg-cover bg-center bg-no-repeat  p-2 transition border-purple-700 hover:bg-[url('./assets/img/button-hover.png')] hover:bg-size-[length:100%_100%] hover:bg-cover hover:bg-center hover:bg-no-repeat  outline-none";
 const tabActive =
-  " bg-[url('src/assets/button-down.png')] bg-size-[length:100%_100%] bg-cover bg-center bg-no-repeat  p-2 my-2 transition outline-none";
+  " bg-[url('public/button-down.png')] bg-size-[length:100%_100%] bg-cover bg-center bg-no-repeat  p-2 my-2 transition outline-none";
 function App() {
   const [loading, setLoading] = useState(true)
     useEffect(() => {
