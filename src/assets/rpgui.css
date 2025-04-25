@@ -637,7 +637,7 @@ ul.rpgui-list-imp {
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
   font-size: 1.14em;
   /* center text */
-  text-align: center;
+  
   /* padding */
   padding: 0 0 0 0;
   margin: 7px 7px 17px 7px; }
@@ -693,7 +693,7 @@ ul.rpgui-list-imp {
 /* default span */
 .rpgui-content span {
   /* color and border */
-  color: white;
+ 
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
   font-size: 1.0em;
   line-height: 22px; }
@@ -829,23 +829,35 @@ ul.rpgui-list-imp {
 * Rules for misc and general things.
 */
 /* set scrollbars for webkit browsers (like chrome) */
+
 .rpgui-content ::-webkit-scrollbar,
 .rpgui-content::-webkit-scrollbar {
-  width: 18px; }
-
+  width: 5px; 
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+.rpgui-content:hover ::-webkit-scrollbar,
+.rpgui-content:hover::-webkit-scrollbar {
+  opacity: 1;
+}
 /* Track */
 .rpgui-content ::-webkit-scrollbar-track,
 .rpgui-content::-webkit-scrollbar-track {
   background-image: url("img/scrollbar-track.png");
   background-size: 18px 60px;
-  background-repeat: repeat-y; }
+  background-repeat: repeat-y;
+}
 
 /* Handle */
 .rpgui-content ::-webkit-scrollbar-thumb,
 .rpgui-content::-webkit-scrollbar-thumb {
-  background-image: url("img/scrollbar-thumb.png");
-  background-size: 100% 100%;
-  background-repeat: no-repeat; }
+  background: transparent;
+  transition: background-color 0.3s ease;
+}
+.rpgui-content ::-webkit-scrollbar-thumb:active,
+.rpgui-content::-webkit-scrollbar-thumb:active {
+  background: #8200db;
+}
 
 /* buttons */
 .rpgui-content ::-webkit-scrollbar-button,
