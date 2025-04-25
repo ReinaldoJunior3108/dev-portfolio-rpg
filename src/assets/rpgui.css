@@ -685,7 +685,7 @@ ul.rpgui-list-imp {
 /* default p */
 .rpgui-content p {
   /* color and border */
-  color: white;
+ 
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 
   line-height: 22px; }
@@ -695,7 +695,7 @@ ul.rpgui-list-imp {
   /* color and border */
  
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
-  font-size: 1.0em;
+  
   line-height: 22px; }
 
 /* default gui link */
@@ -851,7 +851,7 @@ ul.rpgui-list-imp {
 /* Handle */
 .rpgui-content ::-webkit-scrollbar-thumb,
 .rpgui-content::-webkit-scrollbar-thumb {
-  background: transparent;
+  background: #b9b9b968;
   transition: background-color 0.3s ease;
 }
 .rpgui-content ::-webkit-scrollbar-thumb:active,
