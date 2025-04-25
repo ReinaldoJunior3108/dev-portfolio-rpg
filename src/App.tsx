@@ -13,13 +13,12 @@ const tabStyles =
 const tabActive =
   " bg-[url('/button-down.png')] bg-size-[length:100%_100%] bg-cover bg-center bg-no-repeat  p-2 my-2 transition outline-none";
 function App() {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     setTimeout(() => setLoading(false), 9000);
   }, []);
-  if (loading) {
-    return <Loader />;
-  }
+  
+
   const [menuOpen, setMenuOpen] = useState(false);
   //@ts-ignore
   const menuRef = useRef();
@@ -43,6 +42,8 @@ function App() {
   }, [menuOpen]);
 
   return (
+    <>
+    {loading ? <Loader /> : (
     <div className="rpgui-content">
       <Tabs className=" flex justify-center items-center w-screen h-screen  ">
         <div
@@ -188,7 +189,7 @@ function App() {
                 💡 Dica: Comece pelo botão <strong>My Profile</strong>
               </p>
             </TabPanel>
-            <TabPanel className="flex justify-center flex-col items-center w-[60vw] relative text-[0.8rem] font-['JetBrains_Mono:mono'] p-4">
+            <TabPanel className="flex justify-center flex-col items-center w-[60vw] relative text-[0.8rem] font-['JetBrains_mono'] p-4">
               <div className="text-left">
                 <p className="text-xl font-bold mb-3">Meu Perfil</p>
                 <p>A história de um mago digital em ascensão...</p>
@@ -240,7 +241,8 @@ function App() {
           </div>
         </div>
       </Tabs>
-    </div>
+    </div>)}
+    </>
   );
 }
 

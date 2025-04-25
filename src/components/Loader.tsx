@@ -13,7 +13,7 @@ export default function Loader() {
         
       <div className="flex flex-col w-1/2 h-full justify-center items-center flex-nowrap relative">
         
-        <div className="rpgui-progress max-w-1/2 ">
+        <div className="rpgui-progress lg:max-w-1/2 ">
         <div className="rpgui-progress-right-edge"></div>
         <div className="rpgui-progress-track">
             <div className="rpgui-progress-fill blue animate-progress"></div>
@@ -21,7 +21,7 @@ export default function Loader() {
         <div className="rpgui-progress-left-edge"></div>
         </div>
         
-        <img src={Attack} alt="" className="w-64 absolute mt-0 left-10"/>
+        <img src={Attack} alt="" className="w-64 absolute mt-0 left-[-100px] lg:left-10"/>
       </div>
     </div>
     
