@@ -56,13 +56,13 @@ function App() {
        : (
         <div className="rpgui-content h-dvh">
           <Tabs
-            className=" flex justify-center items-center w-screen h-screen  "
+            className=" flex justify-center items-center w-screen h-dvh  "
           >
             <div onClick={() => setMenuOpen(!menuOpen)} className={`${menuOpen ? "hidden" : "block"}`}>
             <MenuHamburguer onClick={() => setMenuOpen(!menuOpen)}/>
             </div>
             <BackTop />
-            <div className="flex gap-8 h-[95vh]">
+            <div className="flex gap-8 h-[95dvh]">
               <div
                 //@ts-ignore
                 ref={menuRef}
@@ -74,7 +74,7 @@ function App() {
                   } lg:translate-x-0
                 `}
               >
-                <div className="flex h-[95vh]  flex-col items-center justify-between p-4 text-center  bg-gray-900 rounded-xs rpgui-container framed">
+                <div className="flex h-[95dvh]  flex-col items-center justify-between p-4 text-center  bg-gray-900 rounded-xs rpgui-container framed">
                   <img
                     src={logo}
                     alt="Logo"
@@ -132,7 +132,7 @@ function App() {
               </div>
 
               <div id="scrollable-container" className="flex-1 font-['Silkscreen'] text-white  p-4 text-center relative h-full rpgui-container framed overflow-y-scroll ">
-                <TabPanel className="flex justify-center flex-col items-center w-[80vw] lg:w-[60vw]  text-[1rem] md:text-[0.8rem] ">
+                <TabPanel className="flex justify-center flex-col items-center lg:w-[60vw]  text-[1rem] md:text-[0.8rem] ">
                
                   <Home />
                 </TabPanel>
