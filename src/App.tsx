@@ -54,7 +54,7 @@ function App() {
       {loading ? 
         <Loader />
        : (
-        <div className="rpgui-content">
+        <div className="rpgui-content h-dvh">
           <Tabs
             className=" flex justify-center items-center w-screen h-screen  "
           >
