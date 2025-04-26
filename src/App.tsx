@@ -48,18 +48,31 @@ function App() {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [menuOpen]);
+  const [tabIndex, setTabIndex] = useState(0);
 
+  // Carrega o índice salvo do localStorage ao montar
+  useEffect(() => {
+    const savedTab = localStorage.getItem("selectedTab");
+    if (savedTab) setTabIndex(Number(savedTab));
+  }, []);
+
+  // Salva sempre que o índice mudar
+  const handleTabChange = (index: number) => {
+    setTabIndex(index);
+    localStorage.setItem("selectedTab", String(index));
+  };
   return (
     <>
-      {loading ? 
+      {loading ? (
         <Loader />
-       : (
+      ) : (
         <div className="rpgui-content h-dvh">
-          <Tabs
-            className=" flex justify-center items-center w-screen h-dvh  "
-          >
-            <div onClick={() => setMenuOpen(!menuOpen)} className={`${menuOpen ? "hidden" : "block"}`}>
-            <MenuHamburguer onClick={() => setMenuOpen(!menuOpen)}/>
+          <Tabs className=" flex justify-center items-center w-screen h-dvh  " selectedIndex={tabIndex} onSelect={handleTabChange}>
+            <div
+              onClick={() => setMenuOpen(!menuOpen)}
+              className={`${menuOpen ? "hidden" : "block"}`}
+            >
+              <MenuHamburguer onClick={() => setMenuOpen(!menuOpen)} />
             </div>
             <BackTop />
             <div className="flex gap-8 h-[95dvh]">
@@ -131,20 +144,21 @@ function App() {
                 </div>
               </div>
 
-              <div id="scrollable-container" className="flex-1 font-['Silkscreen'] text-white  p-4 text-center relative h-full rpgui-container framed overflow-y-scroll ">
+              <div
+                id="scrollable-container"
+                className="flex-1 font-['Silkscreen'] text-white  p-4 text-center relative h-full rpgui-container framed overflow-y-scroll "
+              >
                 <TabPanel className="flex justify-center flex-col items-center lg:w-[60vw]  text-[1rem] md:text-[0.8rem] ">
-               
                   <Home />
                 </TabPanel>
                 <TabPanel className="flex justify-center flex-col items-center lg:w-[60vw] relative text-[0.8rem] font-['JetBrains_mono'] p-4 ">
-
                   <Profile />
                 </TabPanel>
                 <TabPanel className="flex justify-center flex-col items-center font-['JetBrains_mono'] lg:w-[60vw] relative text-[0.8rem]">
                   <p className="text-2xl text-left font-bold px-4">
                     Minhas habilidades
                   </p>
-                  <Tabs>
+                  <Tabs >
                     <TabList>
                       <div className="flex justify-center items-center flex-col lg:flex-row md:gap-12 mt-5">
                         <Tab
@@ -172,19 +186,16 @@ function App() {
                 <TabPanel className="flex justify-center flex-col items-center lg:w-[60vw] relative text-[0.8rem]">
                   <ProjectsGrid />
                 </TabPanel>
-                <TabPanel className="flex justify-center flex-col items-center lg:w-[60vw] relative text-[0.8rem]">
+                <TabPanel className="flex justify-center flex-col items-center w-[85vw] lg:w-[60vw] relative text-[0.8rem]">
                   <Contact />
                 </TabPanel>
                 <TabPanel className="flex justify-center flex-col items-center lg:w-[60vw] relative text-[0.8rem]">
-                <About />
+                  <About />
                 </TabPanel>
-                
               </div>
             </div>
-            
           </Tabs>
         </div>
-        
       )}
     </>
   );

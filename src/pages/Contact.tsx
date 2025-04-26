@@ -33,7 +33,7 @@ export default function Contact() {
     }
   return (
 
-    <div className="font-['JetBrains_mono'] flex flex-col gap-4  md:p-4 mt-[-1.5rem]">
+    <div className="font-['JetBrains_mono'] flex flex-col gap-4 w-full md:p-4 mt-[-1.5rem]">
       <p className="text-2xl font-bold text-left">Entre em Contato</p>
       <br />
       <hr className="golden"/>
