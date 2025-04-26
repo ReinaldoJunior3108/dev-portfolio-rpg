@@ -48,21 +48,23 @@ const arrowStyle = { color: '#000' };
       <hr />
       <Popup trigger={<div className={tabStyles}>Detalhes</div>}{...{ contentStyle, overlayStyle, arrowStyle }} modal 
       > 
-       {(close: any) => ( // <- Aqui você recebe o close
-    
-    <div className="rpgui-container framed-golden flex p-4 flex-col w-[100%] mx-auto md:w-[50%] justify-center items-center">
-      <p className="text-2xl font-bold mt-3 text-white">{title}</p>
-      <br /><hr className="golden"/>
-      <img src={image} alt="" className="w-[50%]" />
-      <br />
-      <p className="text-left w-[50%] text-white">{innerdesc}</p>
-      <br />
-      <div className="flex flex-col gap-4 w-[50%]">
-        <a href={deploy} className={tabStyles}>Ver Projeto</a>
-        <a href={git} className={tabStyles}>Ver Código</a>
-        <button className={tabStyles} onClick={close}>Fechar</button>
+      {/* @ts-ignore */}
+   {(close: any) => ( 
+    <>
+      <div className="rpgui-container framed-golden flex p-4 flex-col w-[100%] mx-auto md:w-[50%] justify-center items-center">
+        <p className="text-2xl font-bold mt-3 text-white">{title}</p>
+        <br /><hr className="golden"/>
+        <img src={image} alt="" className="w-[50%]" />
+        <br />
+        <p className="text-left w-[50%] text-white">{innerdesc}</p>
+        <br />
+        <div className="flex flex-col gap-4 w-[50%]">
+          <a href={deploy} className={tabStyles}>Ver Projeto</a>
+          <a href={git} className={tabStyles}>Ver Código</a>
+          <button className={tabStyles} onClick={close}>Fechar</button>
+        </div>
       </div>
-    </div>
+    </>
   )}
       </Popup>
     </div>

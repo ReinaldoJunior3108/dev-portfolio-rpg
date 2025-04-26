@@ -4,7 +4,7 @@ type MenuHamburguerProps = {
     onClick?: () => void; // onClick é opcional e é uma função sem argumentos
   };
 export default function MenuHamburguer({onClick}: MenuHamburguerProps) {
-    const [menuOpen, setMenuOpen] = useState(false);
+    const [menuOpen ] = useState(false);
     
     return (
         
