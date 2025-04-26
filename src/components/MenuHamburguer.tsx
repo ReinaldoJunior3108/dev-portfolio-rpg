@@ -1,7 +1,11 @@
 
 import { useState } from "react";
-export default function MenuHamburguer() {
+type MenuHamburguerProps = {
+    onClick?: () => void; // onClick é opcional e é uma função sem argumentos
+  };
+export default function MenuHamburguer({onClick}: MenuHamburguerProps) {
     const [menuOpen, setMenuOpen] = useState(false);
+    
     return (
         
         <div
@@ -11,7 +15,7 @@ export default function MenuHamburguer() {
             >
               <span
                 className="flex justify-center items-center !text-purple-300 "
-                onClick={() => setMenuOpen(!menuOpen)}
+                onClick={onClick}
               >
                 {" "}
                 <svg

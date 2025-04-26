@@ -2,14 +2,18 @@ import "./App.css";
 import { Tab, Tabs, TabPanel, TabList } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import { useEffect, useState, useRef } from "react";
-import Loader from "./components/Loader";
+import Loader from "./pages/Loader";
 import "./assets/rpgui.css";
 import logo from "./assets/img/logo.png";
 import HardSkills from "./components/HardSkills";
 import SoftSkills from "./components/SoftSkills";
 import MenuHamburguer from "./components/MenuHamburguer";
-import Home from "./components/Home";
-import Profile from "./components/Profile";
+import Home from "./pages/Home";
+import Profile from "./pages/Profile";
+import BackTop from "./components/BackTop";
+import ProjectsGrid from "./pages/ProjectsGrid";
+import Contact from "./pages/Contact";
+import About from "./pages/About";
 
 const tabStyles =
   "relative  list-none w-[90%] h-full flex items-center justify-center  text-white font-['Silkscreen'] bg-[url('./assets/img/button.png')] bg-size-[length:100%_100%] bg-cover bg-center bg-no-repeat  p-2 transition border-purple-700 hover:bg-[url('./assets/img/button-hover.png')] hover:bg-size-[length:100%_100%] hover:bg-cover hover:bg-center hover:bg-no-repeat  outline-none";
@@ -18,7 +22,7 @@ const tabStylesSkills =
 const tabActive =
   " bg-[url('/button-down.png')] bg-size-[length:100%_100%] bg-cover bg-center bg-no-repeat  p-2 my-2 transition outline-none";
 function App() {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
     setTimeout(() => setLoading(false), 9000);
   }, []);
@@ -47,12 +51,17 @@ function App() {
 
   return (
     <>
-      {loading ? (
+      {loading ? 
         <Loader />
-      ) : (
+       : (
         <div className="rpgui-content">
-          <Tabs className=" flex justify-center items-center w-screen h-screen  ">
-            <MenuHamburguer />
+          <Tabs
+            className=" flex justify-center items-center w-screen h-screen  "
+          >
+            <div onClick={() => setMenuOpen(!menuOpen)} className={`${menuOpen ? "hidden" : "block"}`}>
+            <MenuHamburguer onClick={() => setMenuOpen(!menuOpen)}/>
+            </div>
+            <BackTop />
             <div className="flex gap-8 h-[95vh]">
               <div
                 //@ts-ignore
@@ -122,12 +131,14 @@ function App() {
                 </div>
               </div>
 
-              <div className="flex-1 font-['Silkscreen'] text-white  p-4 text-center relative h-full rpgui-container framed overflow-y-scroll ">
+              <div id="scrollable-container" className="flex-1 font-['Silkscreen'] text-white  p-4 text-center relative h-full rpgui-container framed overflow-y-scroll ">
                 <TabPanel className="flex justify-center flex-col items-center w-[80vw] lg:w-[60vw]  text-[1rem] md:text-[0.8rem] ">
+               
                   <Home />
                 </TabPanel>
                 <TabPanel className="flex justify-center flex-col items-center lg:w-[60vw] relative text-[0.8rem] font-['JetBrains_mono'] p-4 ">
-                 <Profile />
+
+                  <Profile />
                 </TabPanel>
                 <TabPanel className="flex justify-center flex-col items-center font-['JetBrains_mono'] lg:w-[60vw] relative text-[0.8rem]">
                   <p className="text-2xl text-left font-bold px-4">
@@ -158,19 +169,22 @@ function App() {
                     </TabPanel>
                   </Tabs>
                 </TabPanel>
-                <TabPanel className="flex justify-center flex-col items-center w-[60vw] relative text-[0.8rem]">
-                  <h1>Projetos desenvolvidos</h1>
+                <TabPanel className="flex justify-center flex-col items-center lg:w-[60vw] relative text-[0.8rem]">
+                  <ProjectsGrid />
                 </TabPanel>
-                <TabPanel className="flex justify-center flex-col items-center w-[60vw] relative text-[0.8rem]">
-                  <h1>Entre em contato</h1>
+                <TabPanel className="flex justify-center flex-col items-center lg:w-[60vw] relative text-[0.8rem]">
+                  <Contact />
                 </TabPanel>
-                <TabPanel className="flex justify-center flex-col items-center w-[60vw] relative text-[0.8rem]">
-                  <h1>Sobre mim</h1>
+                <TabPanel className="flex justify-center flex-col items-center lg:w-[60vw] relative text-[0.8rem]">
+                <About />
                 </TabPanel>
+                
               </div>
             </div>
+            
           </Tabs>
         </div>
+        
       )}
     </>
   );

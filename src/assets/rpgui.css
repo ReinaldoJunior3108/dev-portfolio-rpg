@@ -134,6 +134,7 @@ inside your html file.
   background-size: 100% 100%;
   margin: 0 0 0 0;
   left: 0px;
+  
   float: left;
   margin-left: -46px;
   margin-top: -5%; }
@@ -318,7 +319,7 @@ inside your html file.
   border-image-slice: 3 3 3 3;
   border-image-width: 7px;
   border-width: 7px;
-  padding: 12px;
+ 
   /* internal border */
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -555,7 +556,7 @@ ul.rpgui-dropdown-imp {
 .rpgui-content textarea {
   line-height: 22px;
   padding-top: 7px;
-  height: 80px;
+  
   resize: none; }
 
 /* selection highlight */
