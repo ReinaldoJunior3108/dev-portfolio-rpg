@@ -67,7 +67,7 @@ function App() {
         <Loader />
       ) : (
         <div className="rpgui-content h-dvh">
-          <Tabs className=" flex justify-center items-center w-screen h-dvh  " selectedIndex={tabIndex} onSelect={handleTabChange}>
+          <Tabs className=" flex justify-center items-center w-screen h-dvh  " >
             <div
               onClick={() => setMenuOpen(!menuOpen)}
               className={`${menuOpen ? "hidden" : "block"}`}

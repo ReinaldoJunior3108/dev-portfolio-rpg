@@ -6,7 +6,7 @@ export default function Home() {
     return (
         <div>
                           <h1>Bem-vindo ao meu portfólio!</h1>
-                          <div className="md:max-w-[60%] md:text-left mt-10 ml-6">
+                          <div className="md:max-w-[60%] text-left mt-10 ml-6">
                             <p className="text-white font-['JetBrains_Mono','monospace'] font-bold text-2xl ">
                               Reinaldo Junior
                             </p>
