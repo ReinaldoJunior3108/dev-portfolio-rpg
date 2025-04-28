@@ -81,7 +81,7 @@ function App() {
                 ref={menuRef}
                 className={`
                   fixed top-0 left-0 z-40 h-full transition-transform duration-300
-                  w-[70vw] max-w-xs lg:static lg:transform-none lg:w-[25vw]
+                  w-[70vw] max-w-xs lg:static lg:transform-none lg:w-[25vw] pixelated
                   ${
                     menuOpen ? "translate-x-0" : "-translate-x-full"
                   } lg:translate-x-0
@@ -91,7 +91,7 @@ function App() {
                   <img
                     src={logo}
                     alt="Logo"
-                    className="mx-auto mb-1 w-40 mt-3  rpgui-container framed-grey"
+                    className="mx-auto mb-1 w-40 mt-3  rpgui-container framed-grey pixelated"
                   />
                   <h2 className="text-white font-bold mt-2 mb-1">
                     Reinaldo Junior

@@ -6,7 +6,7 @@ export default function Home() {
     return (
         <div>
                           <h1>Bem-vindo ao meu portfólio!</h1>
-                          <div className="md:max-w-[60%] text-left mt-10 ml-6">
+                          <div className="md:max-w-[60%] text-left mt-5 ml-6 ">
                             <p className="text-white font-['JetBrains_Mono','monospace'] font-bold text-2xl ">
                               Reinaldo Junior
                             </p>
@@ -21,7 +21,7 @@ export default function Home() {
                             alt="Reinaldo Junior"
                             className="hidden fixed md:block lg:block bottom-9 right-[-3rem] w-[32rem] "
                           />
-                          <div className="mt-15 ml-6 md:max-w-[60%] text-wrap ">
+                          <div className="mt-6 ml-6 md:max-w-[60%] text-wrap ">
                             <TypeAnimation
                               className="text-left"
                               sequence={[
@@ -32,7 +32,7 @@ export default function Home() {
                               speed={80}
                               repeat={1}
                             />
-                            <div className="mt-12 text-left">
+                            <div className="mt-12 md:mt-5 text-left">
                               <p className="opacity-0 mb-2 animate-fade [animation-delay:5s]">
                                 💻 Programador Front-End
                               </p>

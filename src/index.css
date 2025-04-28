@@ -29,6 +29,9 @@
     }
 }
 }
-html{
+.rpgui-progress, .pixelated img{
+    image-rendering: pixelated;
+}
+.pixelated{
     image-rendering: pixelated;
 }
